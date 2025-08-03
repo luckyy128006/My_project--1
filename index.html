@@ -22,10 +22,12 @@
     <h2>Our Menu</h2>
     <div class="menu-items">
       <div class="item">
+        <img src="https://source.unsplash.com/200x150/?taco" alt="Taco Special">
         <h3>Taco Special</h3>
         <p>$5.99 - Spicy beef with salsa and cheese</p>
       </div>
       <div class="item">
+        <img src="https://source.unsplash.com/200x150/?wrap,vegetable" alt="Veggie Wrap">
         <h3>Veggie Wrap</h3>
         <p>$4.99 - Grilled veggies with hummus</p>
       </div>
@@ -42,27 +44,11 @@
     <p>We move around! Check our Instagram for today's location.</p>
   </section>
 
- <footer id="footer">
-  <p>© <span id="year"></span> Food Truck Delight. All rights reserved.</p>
-  <p><span id="year"></span> Contact : +91 9502730666</p>
-</footer>
+  <footer id="footer">
+    <p>© <span id="year"></span> Food Truck Delight. All rights reserved.</p>
+    <p>Contact : +91 9502730666</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
- <script>
-  // Set the current year
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  // Array of colors to cycle through
-  const colors = ["#FF6B6B", "#4ECDC4", "#FFD93D", "#1A535C", "#FF9F1C"];
-  let index = 0;
-
-  // Function to update colors every 5 seconds
-  setInterval(() => {
-    document.getElementById("navbar").style.backgroundColor = colors[index];
-    document.getElementById("footer").style.backgroundColor = colors[index];
-    index = (index + 1) % colors.length;
-  }, 5000);
-</script>
