@@ -9,7 +9,7 @@
 <body>
   <header>
     <h1>Food Truck Delight</h1>
-    <nav>
+    <nav id="navbar">
       <ul>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#about">About Us</a></li>
@@ -42,10 +42,27 @@
     <p>We move around! Check our Instagram for today's location.</p>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Food Truck Delight. All rights reserved.</p>
-  </footer>
+ <footer id="footer">
+  <p>© <span id="year"></span> Food Truck Delight. All rights reserved.</p>
+  <p><span id="year"></span> Contact : +91 9502730666</p>
+</footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
+ <script>
+  // Set the current year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Array of colors to cycle through
+  const colors = ["#FF6B6B", "#4ECDC4", "#FFD93D", "#1A535C", "#FF9F1C"];
+  let index = 0;
+
+  // Function to update colors every 5 seconds
+  setInterval(() => {
+    document.getElementById("navbar").style.backgroundColor = colors[index];
+    document.getElementById("footer").style.backgroundColor = colors[index];
+    index = (index + 1) % colors.length;
+  }, 5000);
+</script>
